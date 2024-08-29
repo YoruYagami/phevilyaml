@@ -24,11 +24,10 @@ Install the dependencies using pip:
 pip install mitmproxy PyYAML termcolor
 ```
 
-Usage
+## Usage
 Clone the repository:
 
 ```bash
-Copia codice
 git clone https://github.com/yourusername/phevilyaml.git
 cd phevilyaml
 ```
@@ -37,11 +36,13 @@ Run the script:
 
 You can specify the target domain and the port for mitmproxy to listen on:
 
-bash
-Copia codice
+```bash
 python3 phyaml.py -u 'https://example.com' --listen-port 8080
+
 -u or --url: The target domain for generating the phishlet.
 --listen-port: The port mitmproxy will listen on (default is 8080).
+```
+
 Navigating Through the Site:
 
 While the script is running, use your browser to navigate through the target site. The script will intercept and log the traffic, capturing all necessary data to generate the phishlet YAML file.
@@ -53,11 +54,12 @@ Once you are done capturing the necessary data, stop the script by pressing Ctrl
 Example
 Running the script for https://example.com would generate a file named example_com.yaml containing the structured and populated phishlet.
 
-bash
-Copia codice
+```bash
 python3 phyaml.py -u 'https://example.com' --listen-port 8080
-Log Output
+```
+
+## Log Output 
 As you navigate the target site, the script will log the captured data in real-time. The logging is designed to be clean and minimal, showing only the tree structure of the site, status codes, and relevant information for the phishlet YAML.
 
-Contributing
+## Contributing
 Feel free to contribute to this project by submitting issues, feature requests, or pull requests. Any feedback is appreciated!
